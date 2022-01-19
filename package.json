@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "Develop local server by Node, Express, etc modules",
   "main": "app.js",
+  "type": "module",
   "scripts": {
-    "start": "nodemon app.js",
+    "start": "nodemon ./src/start.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,7 +19,13 @@
   },
   "homepage": "https://github.com/unchaptered/22-01-express-server#readme",
   "dependencies": {
+    "connect-mongo": "^4.6.0",
+    "dotenv": "^14.2.0",
     "express": "^4.17.2",
+    "express-flash": "git://github.com/RGBboy/express-flash.git",
+    "express-session": "^1.17.2",
+    "mongoose": "^6.1.7",
+    "morgan": "^1.10.0",
     "nodemon": "^2.0.15"
   }
 }
