@@ -1,0 +1,24 @@
+{
+  "name": "project-2022-01-express-server",
+  "version": "1.0.0",
+  "description": "Develop local server by Node, Express, etc modules",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unchaptered/22-01-express-server.git"
+  },
+  "author": "unchaptered",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/unchaptered/22-01-express-server/issues"
+  },
+  "homepage": "https://github.com/unchaptered/22-01-express-server#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "nodemon": "^2.0.15"
+  }
+}
