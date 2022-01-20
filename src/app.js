@@ -6,6 +6,8 @@ import session from "express-session";
 
 import flash from "express-flash";
 
+import homeRouter from "./routers/homeRouter.js";
+
 const app=express();
 const morganLog=morgan("dev");
 
@@ -19,12 +21,10 @@ app.use(morganLog);
 app.use(express.urlencoded({ extended: true}));
 app.use(express.json());
 
-// app.use({
-//     session({
-//     })
-// });
 
-app.use(flash());
+app.use("/assets", express.static("assets"));
+
 // How can we send a message between two pages, except "render".
+app.use("/", homeRouter);
 
 export default app;

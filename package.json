@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/unchaptered/22-01-express-server#readme",
   "dependencies": {
+    "axios": "^0.25.0",
     "connect-mongo": "^4.6.0",
     "dotenv": "^14.2.0",
     "express": "^4.17.2",
@@ -26,6 +27,7 @@
     "express-session": "^1.17.2",
     "mongoose": "^6.1.7",
     "morgan": "^1.10.0",
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "pug": "^3.0.2"
   }
 }
