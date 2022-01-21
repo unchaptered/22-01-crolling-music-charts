@@ -3,6 +3,6 @@ import express from "express";
 const apiRouter=express.Router();
 
 apiRouter.route("/")
-    .get(getIndex);
+    .get(crollingMelonCharts);
 
 export default apiRouter;
