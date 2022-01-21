@@ -5,8 +5,11 @@ html(lang="en")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title Document
+        link(rel="stylesheet" href="/assets/css/styles.css")
     body
         //-  상단 네비게이션 바(세션 미연동)
-        include ./components/nav-top.pug
+        include components/navTop.pug
         
         block main
+
+        include components/footer.pug
