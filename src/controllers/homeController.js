@@ -53,20 +53,13 @@ export const getIndex=async(req,res)=>{
         data={};
 
         // 곡정보 탭에서 곡제목, 가수 뽑기
-        const songDataObj=$(rows[5]).find("div div div");
-        data.title=$(songDataObj).find("span:nth-child(1) a").text();
-        const singerDataObj=$(songDataObj).find("span:nth-child(2)");
-        let singers=[];
-        singerDataObj.each((items, element)=>{
-            singers.push($(element).find("a").text());
-        });
-        data.singer=singers;
+        const songTap=$(rows[5]).find("div div");
+        const title=$(songTap).find("div:nth-child(1) span a").text();
+        data.title=title;
 
-        // 앨범 탭에서 앨범 제목 뽑기
-        data.elbum=$(rows[6]).find("div div div span a").text();
+        data.elbum=$(rows[6]).find("div div div a").text();
 
         // 순위 탭에서 순위 뽑기
-
         // 순위 진입순위 진입
         // 단계 상승단계 상승23
         // 단계 하락단계 하락13
@@ -80,14 +73,9 @@ export const getIndex=async(req,res)=>{
         datas.push(data);
     })
 
-    // console.log(datas);
+    console.log(datas);
     
     return res.render("index",{
         pageTitle:"작은 프로그램"
     });
 }
-
-// 둘중하나 (그룹)
-// const songDataObj=$(rows[5]).find("div div");
-// data.title=$(songDataObj).find("div:nth-child(1) span:nth-child(1) a").text();
-// const singerDataObj=$(songDataObj).find("div:nth-child(2)")
