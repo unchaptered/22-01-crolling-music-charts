@@ -20,6 +20,7 @@
   "homepage": "https://github.com/unchaptered/22-01-express-server#readme",
   "dependencies": {
     "axios": "^0.25.0",
+    "cheerio": "^1.0.0-rc.10",
     "connect-mongo": "^4.6.0",
     "dotenv": "^14.2.0",
     "express": "^4.17.2",
