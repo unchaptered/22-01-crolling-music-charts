@@ -7,6 +7,7 @@ import session from "express-session";
 import flash from "express-flash";
 
 import homeRouter from "./routers/homeRouter.js";
+import rankingRouter from "./routers/rankingRouter.js";
 import apiRouter from "./routers/apiRouter.js";
 
 const app=express();
@@ -28,5 +29,6 @@ app.use("/assets", express.static("assets"));
 // How can we send a message between two pages, except "render".
 app.use("/", homeRouter);
 app.use("/api", apiRouter);
+app.use("/ranking", rankingRouter);
 
 export default app;

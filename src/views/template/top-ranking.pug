@@ -1,0 +1,11 @@
+extends ../base.pug
+
+block main
+    main#main
+        div.main-sizer
+            each element in datas
+                div.main_content
+                    span #{element.index}등 
+                    span #{element.title}
+                    span #{element.singer}
+                    span #{element.elbum}

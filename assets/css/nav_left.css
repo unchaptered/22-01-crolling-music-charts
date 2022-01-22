@@ -1,0 +1,60 @@
+@import "_root.css";
+
+#nav_side {
+    position: fixed;
+    width: auto;
+    height: auto;
+    background-color: rgb(208, 208, 208);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.nav-sizer {
+    padding: 30px;
+    width: var(--nav-horizontal-);
+    height: 100vh;
+}
+.nav-flex {
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.nav_header > h1 {
+    text-align: center;
+    font-weight: 900;
+    color: rgb(47, 47, 47);
+    letter-spacing: 2px;
+}
+.nav_linkers {
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.nav_linkers > a {
+    opacity: 0.7;
+    transition: opacity 0.2s linear;
+}
+.nav_linkers > a:hover {
+    opacity: 1;
+}
+
+
+/* 모바일 기준 */
+@media screen and (max-width: 820px) {
+    .nav-sizer {
+        width: 100vw;
+        height: var(--nav-vertical-);
+    }
+    .nav_linkers {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .nav_linkers > a {
+        width: 220px;
+        font-size: 18px;
+    }
+    .nav_linkers > a:nth-child(odd) {
+        justify-self: flex-end;
+    }
+    .nav_linkers > a:nth-child(even) {
+        justify-self: flex-start;
+    }
+}

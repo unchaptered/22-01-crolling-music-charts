@@ -1,13 +1,12 @@
 :root {
-    /* 1200px 이상 */
-    --sizer-width-: 1060px;
+    /* nav_left 반응형 크기 수치 */
+    /* 820px 이상 */
+    --nav-horizontal-: 260px;
+    /* 820px 미만 */
+    --nav-vertical-: 217px;
 
-    /* 1200px 미만 */
-    --sizer-padding-: 0 30px;
-    
-    /* 높이 규격 */
-    --nav-height-: 70px;
-    --footer-height-: 70px;
+    /* aside-link 크기 */
+    --aside-a-link-: 18px;
 
     /* 표준 보더(단방향) */
     --border-one-side-: 1px solid black;

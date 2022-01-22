@@ -1,22 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;500;700;900&display=swap');
 
 /* Components */
-@import "navTop.css";
-@import "footer.css";
+@import "nav_left.css";
+@import "main.css";
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-
+span {
+}
 body {
     font-family: 'Noto Sans KR', sans-serif;
-}
-main {
-    padding-top: var(--nav-height-);
-    /* footer 가 1px 의 보더가 있다. */
-    min-height: calc(100vh - var(--footer-height-) - 1px);
 }
 a {
     color: inherit;

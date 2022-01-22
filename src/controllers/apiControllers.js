@@ -1,7 +1,7 @@
 import axios from "axios";
 import cherrio from "cheerio";
 
-const URLs={
+export const URLs={
     melon:[
         "https://www.melon.com/chart/day/index.htm",
         "https://www.melon.com/chart/week/index.htm",
@@ -12,7 +12,6 @@ const URLs={
         "https://music.bugs.co.kr/chart/track/week/total"
     ],
 }
-
 
 /**
  * data 구조
@@ -26,7 +25,7 @@ const URLs={
  * @param {*} HTML 
  * @returns 
  */
-function extractMelonRanking(HTML) {
+export function extractMelonRanking(HTML) {
     const $=cherrio.load(HTML.data);
 
     const RANKING=$("form#frm div.service_list_song table tbody").children("tr");
@@ -77,7 +76,7 @@ function extractMelonRanking(HTML) {
  * @param {*} HTML 
  * @returns 
  */
-function extractBugsRanking(HTML) {
+export function extractBugsRanking(HTML) {
     const $=cherrio.load(HTML.data);
 
     const RANKING=$("div.innerContainer div#CHARTday table tbody").children("tr");
@@ -117,11 +116,11 @@ function extractBugsRanking(HTML) {
     return datas;
 }
 
-export const dailyBugCharts=async(req, res)=>{
+export const dailyBugChartsCrolling=async(req, res)=>{
     let datas;
     try {
         const HTML=await axios.get(URLs.bugs[0]);
-        datas==extractBugsRanking(HTML);
+        datas=extractBugsRanking(HTML);
 
         console.log(datas);
         return res.status(200).redirect("/");
@@ -131,13 +130,13 @@ export const dailyBugCharts=async(req, res)=>{
         return res.status(404).redirect("/");
     }
 }
-export const weeklyBugCharts=async(req, res)=>{
+export const weeklyBugChartsCrolling=async(req, res)=>{
     let datas;
     try {
         const HTML=await axios.get(URLs.bugs[1]);
-        datas==extractBugsRanking(HTML);
+        datas=extractBugsRanking(HTML);
 
-        console.log(datas);
+        // console.log("hi",datas);
         return res.status(200).redirect("/");
     } catch(error) {
         console.error(error);
@@ -145,7 +144,7 @@ export const weeklyBugCharts=async(req, res)=>{
     }
 }
 
-export const dailyMelonCharts=async(req, res)=>{
+export const dailyMelonChartsCrolling=async(req, res)=>{
     let datas;
     try {
         const HTML=await axios.get(URLs.melon[0]);
@@ -158,7 +157,7 @@ export const dailyMelonCharts=async(req, res)=>{
         return res.status(404).redirect("/");
     }
 }
-export const weeklyMelonCharts=async(req,res)=>{
+export const weeklyMelonChartsCrolling=async(req,res)=>{
     let datas;
     try {
         const HTML=await axios.get(URLs.melon[1]);
@@ -171,7 +170,7 @@ export const weeklyMelonCharts=async(req,res)=>{
         return res.status(404).redirect("/");
     }
 }
-export const monthlyMelonCharts=async(req, res)=>{
+export const monthlyMelonChartsCrolling=async(req, res)=>{
     let datas;
     try {
         const HTML=await axios.get(URLs.melon[2]);        
@@ -185,6 +184,3 @@ export const monthlyMelonCharts=async(req, res)=>{
     }
 }
 
-export const notExistsPage=(req, res)=>{
-    return res.redirect("/");
-}

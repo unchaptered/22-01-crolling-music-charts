@@ -4,12 +4,10 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Document
+        title #{pageTitle} / Music Charts
         link(rel="stylesheet" href="/assets/css/styles.css")
     body
+        include components/navSide.pug
         //-  상단 네비게이션 바(세션 미연동)
-        include components/navTop.pug
         
         block main
-
-        include components/footer.pug
