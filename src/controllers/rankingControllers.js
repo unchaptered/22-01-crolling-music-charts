@@ -1,5 +1,5 @@
 import axios from "axios";
-import { extractMelonRanking, extractBugsRanking, URLs } from "./apiCrollers.js";
+import { extractMelonRanking, extractBugsRanking, URLs } from "../croller/apiCrollers.js";
 
 export const dailyBugChartsViews=async(req, res)=>{
     let datas;
@@ -20,9 +20,9 @@ export const dailyBugChartsViews=async(req, res)=>{
 export const weeklyBugChartsViews=async(req, res)=>{
     let datas;
     try {
-        const HTML=await axios.get(URLs.bugs[0]);
+        const HTML=await axios.get(URLs.bugs[1]);
         datas=extractBugsRanking(HTML);
-
+        
         console.log(datas);
     } catch(error) {
         console.error(error);

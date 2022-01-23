@@ -3,7 +3,6 @@ export const getHome=(req, res)=>{
         pageTitle:"작은 프로그램",
     });
 }
-
 export const notExistsPage=(req, res)=>{
     return res.redirect("/");
 }

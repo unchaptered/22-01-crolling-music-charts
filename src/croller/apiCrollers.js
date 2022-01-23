@@ -28,7 +28,9 @@ export const URLs={
 export function extractBugsRanking(HTML) {
     const $=cherrio.load(HTML.data);
 
-    const RANKING=$("div.innerContainer div#CHARTday table tbody").children("tr");
+
+    // Bugs 일일차트와 주간차트의 div의 id 값이 달라서 nth-child 를 사용하였다.
+    const RANKING=$("div.innerContainer div:nth-child(3) table tbody").children("tr");
 
     let row=null;
     let datas=[];
