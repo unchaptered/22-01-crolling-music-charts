@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "nodemon ./src/start.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
   },
   "repository": {
     "type": "git",
@@ -26,5 +26,8 @@
     "morgan": "^1.10.0",
     "nodemon": "^2.0.15",
     "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "jest": "^27.4.7"
   }
 }
