@@ -1,5 +1,5 @@
 import axios from "axios";
-import { extractMelonRanking, extractBugsRanking, URLs } from "./apiControllers.js";
+import { extractMelonRanking, extractBugsRanking, URLs } from "./apiCrollers.js";
 
 export const dailyBugChartsViews=async(req, res)=>{
     let datas;
