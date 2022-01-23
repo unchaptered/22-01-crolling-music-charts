@@ -4,7 +4,7 @@
 
 몇 개월 전부터 관심있었던 **크롤링** 과 **TDD** 를 경험해보기 위한 토이 프로젝트를 진행하였습니다.
 
-[Github Repository](https://github.com/unchaptered/22-01-express-server)
+[Github Repository](https://github.com/unchaptered/22-01-crolling-music-charts)<br>
 [Velog unchaptered](https://velog.io/@unchapterd/TOY-%EC%9D%8C%EC%95%85-%EB%9E%AD%ED%82%B9-%ED%81%AC%EB%A1%A4%EB%A7%81)
 
 # Music Charts
